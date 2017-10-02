@@ -329,6 +329,26 @@ class Client
     }
 
     /**
+     * Get last match from given League
+     *
+     * @param  string $league
+     *
+     * @return Match
+     *
+     * @throws \SoapFault
+     * @throws InvalidResponseException
+     * @throws InvalidEntityException
+     */
+    public function getLastMatch($league)
+    {
+        $match = $this->doCall('GetLastMatch', [
+            'leagueShortcut' => $league
+        ]);
+
+        return $match;
+    }
+
+    /**
      * Get all Match between two Teams
      *
      * @param $teamId1
