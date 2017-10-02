@@ -2,6 +2,7 @@
 
 namespace juniorrosul\OpenLigaDbApi;
 
+use Carbon\Carbon;
 use juniorrosul\OpenLigaDbApi\Api\ArrayOfGoals;
 use juniorrosul\OpenLigaDbApi\Api\ArrayOfGroups;
 use juniorrosul\OpenLigaDbApi\Api\ArrayOfLeagues;
@@ -21,6 +22,7 @@ use juniorrosul\OpenLigaDbApi\Exception\EmptyEntityException;
 use juniorrosul\OpenLigaDbApi\Exception\InvalidEntityException;
 use juniorrosul\OpenLigaDbApi\Exception\InvalidResponseException;
 use juniorrosul\OpenLigaDbApi\Model\Checkable;
+
 
 
 class Client
@@ -274,6 +276,33 @@ class Client
         ]);
 
         return $matches->getMatches();
+    }
+
+    /**
+     * Get all upcoming matches by a given league
+     *
+     * @param string $league
+     * @param integer $season
+     *
+     * @return Match[]
+     *
+     * @throws \SoapFault
+     * @throws InvalidResponseException
+     * @throws InvalidEntityException
+     */
+    public function getUpcomingMatchesByLeague($league)
+    {
+        $matches = $this->doCall('GetMatchdataByLeagueSaison', [
+            'leagueShortcut' => $league,
+            'leagueSaison' => Carbon::now()->format('Y'),
+        ]);
+
+        $matches_filtered = array_filter($matches->getMatches(), function ($val, $key) {
+            return !$val->isFinished();
+        }, ARRAY_FILTER_USE_BOTH);
+
+        return array_values($matches_filtered);
+
     }
 
     /**
