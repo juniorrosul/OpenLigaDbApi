@@ -433,6 +433,9 @@ class Match extends AbstractApiEntity
         return $this->group;
     }
 
+    /**
+     * @return boolean
+     */
     public function isEmpty()
     {
         return (
