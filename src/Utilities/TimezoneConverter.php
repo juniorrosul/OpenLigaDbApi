@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andi
- * Date: 31.03.16
- * Time: 12:51
- */
 
-namespace Andinger\OpenLigaDbApi\Utilities;
-
+namespace juniorrosul\OpenLigaDbApi\Utilities;
 
 class TimezoneConverter
 {

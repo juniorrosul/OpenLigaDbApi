@@ -1,6 +1,6 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Model;
+namespace juniorrosul\OpenLigaDbApi\Model;
 
 
 interface Checkable

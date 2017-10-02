@@ -5,17 +5,17 @@ Currently not all provided methods are supported by this little project. Feel fr
 
 ## Installation
 
-    composer require andinger/openligadb-api
+    composer require juniorrosul/openligadb-api
 
 ## Usage
 
 #### 1. Create a new Client-Object
-    
+
     // use the standard wsdl url
-    $client = new Andinger\OpenLigaDbApi\Client();
-    
+    $client = new juniorrosul\OpenLigaDbApi\Client();
+
     // use another wsdl url
-    $client = new Andinger\OpenLigaDbApi\Client('https://my.custom.wsdl.url.com/...wsdl');
+    $client = new juniorrosul\OpenLigaDbApi\Client('https://my.custom.wsdl.url.com/...wsdl');
 
     // use additional SoapClient-Config
     // @see http://php.net/manual/de/soapclient.soapclient.php for further information
@@ -23,8 +23,8 @@ Currently not all provided methods are supported by this little project. Feel fr
         'local_cert' => 'cert_key.pem'
     ];
 
-    $client = new Andinger\OpenLigaDbApi\Client('https://my.custom.wsdl.url.com/...wsdl', $options);
-    
+    $client = new juniorrosul\OpenLigaDbApi\Client('https://my.custom.wsdl.url.com/...wsdl', $options);
+
 #### 2. Call the methods
 
     $client->getAvailableLeagues()
@@ -38,9 +38,9 @@ Currently not all provided methods are supported by this little project. Feel fr
     $client->getMatchesByLeagueSeason($league, $season)
     $client->getTeamsByLeagueSeason($league, $season)
     $client->getMatchesByTeams($teamId1, $teamId2)
-    
-All methods in the Client-Class are documented    
-    
+
+All methods in the Client-Class are documented
+
 ## Further Information
 
 See [http://www.openligadb.de](http://www.openligadb.de) for further information

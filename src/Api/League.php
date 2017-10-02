@@ -1,6 +1,6 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Api;
+namespace juniorrosul\OpenLigaDbApi\Api;
 
 class League extends AbstractApiEntity
 {
@@ -31,7 +31,7 @@ class League extends AbstractApiEntity
 
     /**
      * @param Match $match
-     * @return League 
+     * @return League
      */
     public static function createFromMatch(Match $match)
     {

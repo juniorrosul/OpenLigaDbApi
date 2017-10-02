@@ -1,8 +1,8 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Api;
+namespace juniorrosul\OpenLigaDbApi\Api;
 
-use Andinger\OpenLigaDbApi\Model\Checkable;
+use juniorrosul\OpenLigaDbApi\Model\Checkable;
 
 class ArrayOfMatchResults implements Checkable
 {
@@ -27,7 +27,7 @@ class ArrayOfMatchResults implements Checkable
 
     /**
      * returns the final result (i.e. the match result with the highest orderId)
-     * 
+     *
      * @return MatchResult
      */
     public function getFinalResult()

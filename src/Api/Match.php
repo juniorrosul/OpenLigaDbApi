@@ -1,8 +1,8 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Api;
+namespace juniorrosul\OpenLigaDbApi\Api;
 
-use Andinger\OpenLigaDbApi\Utilities\TimezoneConverter;
+use juniorrosul\OpenLigaDbApi\Utilities\TimezoneConverter;
 
 class Match extends AbstractApiEntity
 {

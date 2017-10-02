@@ -1,8 +1,8 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Api;
+namespace juniorrosul\OpenLigaDbApi\Api;
 
-use Andinger\OpenLigaDbApi\Model\Checkable;
+use juniorrosul\OpenLigaDbApi\Model\Checkable;
 
 class ArrayOfSports implements Checkable
 {

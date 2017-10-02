@@ -1,5 +1,5 @@
 {
-    "name": "andinger/openligadb-api",
+    "name": "juniorrosul/openligadb-api",
     "description": "PHP API to OpenLigaDB",
     "keywords":["api", "sport", "openligadb"],
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Andreas Kessler",
             "email": "info@andikessler.de"
+        },
+        {
+            "name": "Madson Verdi Junior",
+            "email": "madsonverdijr@gmail.com"
         }
     ],
     "require": {
@@ -15,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Andinger\\OpenLigaDbApi\\":"src/"
+            "juniorrosul\\OpenLigaDbApi\\":"src/"
         }
     }
 

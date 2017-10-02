@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andi
- * Date: 30.03.16
- * Time: 18:23
- */
 
-namespace Andinger\OpenLigaDbApi\Api;
-
+namespace juniorrosul\OpenLigaDbApi\Api;
 
 class Team extends AbstractApiEntity
 {

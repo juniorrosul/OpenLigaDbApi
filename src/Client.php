@@ -1,26 +1,26 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi;
+namespace juniorrosul\OpenLigaDbApi;
 
-use Andinger\OpenLigaDbApi\Api\ArrayOfGoals;
-use Andinger\OpenLigaDbApi\Api\ArrayOfGroups;
-use Andinger\OpenLigaDbApi\Api\ArrayOfLeagues;
-use Andinger\OpenLigaDbApi\Api\ArrayOfMatches;
-use Andinger\OpenLigaDbApi\Api\ArrayOfMatchResults;
-use Andinger\OpenLigaDbApi\Api\ArrayOfSports;
-use Andinger\OpenLigaDbApi\Api\ArrayOfTeams;
-use Andinger\OpenLigaDbApi\Api\Goal;
-use Andinger\OpenLigaDbApi\Api\Group;
-use Andinger\OpenLigaDbApi\Api\League;
-use Andinger\OpenLigaDbApi\Api\Location;
-use Andinger\OpenLigaDbApi\Api\Match;
-use Andinger\OpenLigaDbApi\Api\MatchResult;
-use Andinger\OpenLigaDbApi\Api\Sport;
-use Andinger\OpenLigaDbApi\Api\Team;
-use Andinger\OpenLigaDbApi\Exception\EmptyEntityException;
-use Andinger\OpenLigaDbApi\Exception\InvalidEntityException;
-use Andinger\OpenLigaDbApi\Exception\InvalidResponseException;
-use Andinger\OpenLigaDbApi\Model\Checkable;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfGoals;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfGroups;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfLeagues;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfMatches;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfMatchResults;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfSports;
+use juniorrosul\OpenLigaDbApi\Api\ArrayOfTeams;
+use juniorrosul\OpenLigaDbApi\Api\Goal;
+use juniorrosul\OpenLigaDbApi\Api\Group;
+use juniorrosul\OpenLigaDbApi\Api\League;
+use juniorrosul\OpenLigaDbApi\Api\Location;
+use juniorrosul\OpenLigaDbApi\Api\Match;
+use juniorrosul\OpenLigaDbApi\Api\MatchResult;
+use juniorrosul\OpenLigaDbApi\Api\Sport;
+use juniorrosul\OpenLigaDbApi\Api\Team;
+use juniorrosul\OpenLigaDbApi\Exception\EmptyEntityException;
+use juniorrosul\OpenLigaDbApi\Exception\InvalidEntityException;
+use juniorrosul\OpenLigaDbApi\Exception\InvalidResponseException;
+use juniorrosul\OpenLigaDbApi\Model\Checkable;
 
 
 class Client
@@ -346,18 +346,18 @@ class Client
                     $resultObjectName
                 ), $result);
             }
-            
+
             /** @var Checkable $result */
             $result = $result->$resultObjectName;
-            
+
             if($result->isEmpty()) {
                 throw new EmptyEntityException($result);
             }
-            
+
             if(!$result->isValid()) {
                 throw new InvalidEntityException($result);
             }
-            
+
             return $result;
         } catch(\SoapFault $e) {
             throw $e;

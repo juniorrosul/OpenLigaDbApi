@@ -1,6 +1,6 @@
 <?php
 
-namespace Andinger\OpenLigaDbApi\Api;
+namespace juniorrosul\OpenLigaDbApi\Api;
 
 class Goal extends AbstractApiEntity
 {

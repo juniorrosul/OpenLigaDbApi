@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-$client = new \Andinger\OpenLigaDbApi\Client();
+$client = new \juniorrosul\OpenLigaDbApi\Client();
 
 $matches = $client->getMatchesByLeagueSeason('bl1', 2015);
 
